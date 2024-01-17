@@ -1,0 +1,111 @@
+:root {
+    --primary: #b6895b;
+    --bg: #010101;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+}
+
+/* navbaar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(1, 1, 1, 0.8);
+    border-bottom: 1px solid #896745;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo{
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #fff;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span{
+    color: var(--primary);
+}
+
+.navbar .navbar-link a{
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-link a:hover{
+    color: var(--primary);
+}
+
+.navbar .navbar-link a::after{
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.1 linear;
+}
+
+.navbar .navbar-link a:hover::after{
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a{
+    text-decoration: none;
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover{
+    color:var(--primary)
+}
+
+#hamburger-menu{
+    display: none;
+}
+
+/* media quaries */
+
+/* laptop */
+@media (max-width: 1366px){
+    html{
+        font-size: 75%;
+    }
+}
+/* tablet */
+@media (max-width: 768px){
+    html{
+        font-size: 65%;
+    }
+    #hamburger-menu{
+        display: inline-block;
+    }
+    .navbar .navbar-link{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 25rem;
+        height: 100vh;
+    }
+    .navbar .navbar-link.active{
+        right: 0;
+    }
+}
+/* mobilephone */
+@media (max-width: 450px){
+    html{
+        font-size: 55%;
+    }
+}
