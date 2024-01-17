@@ -1,0 +1,11 @@
+baru belajar git,
+tahapan git
+
+buat dulu repo di github kemudian buka git 
+ketik git remote add origin link github 
+
+lalu git remote -v untuk cek apakah sudah berjalan
+
+seperti biasa edit file kalau sudah pas tinggal
+
+git push -u origin main selesai  
